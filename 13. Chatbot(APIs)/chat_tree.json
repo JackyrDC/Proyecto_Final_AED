@@ -9,29 +9,29 @@
           "type" : "function"
         },
         {
-          "message" : "Santa Banta Ha Ha Ha",
-          "type" : "normal"
+          "message" : "getJoke()",
+          "type" : "function"
         },
         {
-          "message" : "Banta Santa",
-          "type" : "normal"
+          "message" : "getJoke()",
+          "type" : "function"
         }
       ]
     },
     {
-      "child_msg" : ["Local News","National News","World News","Terminate chat"],
+      "child_msg" : ["Noticias Locales","Noticias Nacionales","Noticias Mundial de Qatar","Finalizar chat"],
       "children" : [
         {
-          "message" : "getNews()",
+          "message" : "getNewsCM()",
           "type" : "function"
         },
         {
-          "message" : "India is the best",
-          "type" : "normal"
+          "message" : "getNewsHN()",
+          "type" : "function"
         },
         {
-          "message" : "India becomes a super power",
-          "type" : "normal"
+          "message" : "getNewsQatar()",
+          "type" : "function"
         }
       ]
     },

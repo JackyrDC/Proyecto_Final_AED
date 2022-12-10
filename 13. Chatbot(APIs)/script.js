@@ -131,7 +131,7 @@ class ChatTree {
                     data = data.value.joke;
                 } else{
                     data = await eval(this.chat_tree['message']);
-                    data = data.articles[0].title;
+                    data = data.articles[0].image+"<br>"+data.articles[0].title+"<br>"+data.articles[0].description+"<br><br>"+data.articles[0].url;
                 }
             } else{
                 data = this.chat_tree['message'];
@@ -148,13 +148,25 @@ class ChatTree {
 }
 
 async function getJoke() {
-    const response = await fetch('http://api.icndb.com/jokes/random');
+    const response = await fetch('https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Dark,Pun,Spooky,Christmas?blacklistFlags=nsfw,political,racist,sexist,explicit&type=single');
     const jsonResp = await response.json();
     return jsonResp;
 }
 
-async function getNews() {
-    const response = await fetch('http://newsapi.org/v2/top-headlines?country=in&pageSize=1&apiKey=a876816f98574cdfa23ffdc7d531c7bc');
+async function getNewsHN() {
+    const response = await fetch('https://api.mediastack.com/v1/news?access_key=2df46a1fd149c16f54c6d4b925ec1570&countries=hn&languages=es&limit=1');
+    const jsonResp = await response.json();
+    return jsonResp;
+}
+
+async function getNewsCM() {
+    const response = await fetch('https://api.mediastack.com/v1/news?access_key=2df46a1fd149c16f54c6d4b925ec1570&countries=hn&languages=es&limit=1&keywords=comayagua');
+    const jsonResp = await response.json();
+    return jsonResp;
+}
+
+async function getNewsQatar() {
+    const response = await fetch('https://api.mediastack.com/v1/news?access_key=2df46a1fd149c16f54c6d4b925ec1570&countries=hn&languages=es&limit=1&keywords=Qatar');
     const jsonResp = await response.json();
     return jsonResp;
 }
