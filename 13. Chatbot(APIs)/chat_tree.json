@@ -1,32 +1,28 @@
 {
-  "child_msg" : ["Want to hear a joke ?","What about some news ?","Wanna get motivated ?","Terminate chat"],
+  "child_msg" : ["¿Quieres escuchar un chiste?","Sección de Noticias","El Clima","Finalizar chat"],
   "children" : [
     {
-      "child_msg" : ["Funny Joke","Very funny Joke","PJ :)","Terminate chat"],
+      "child_msg" : ["Chistes en Ingles","Chistes en Español","Finalizar chat"],
       "children" : [
         {
-          "message" : "getJoke()",
+          "message" : "getJokeEN()",
           "type" : "function"
         },
         {
-          "message" : "getJoke()",
-          "type" : "function"
-        },
-        {
-          "message" : "getJoke()",
+          "message" : "getJokeSP()",
           "type" : "function"
         }
       ]
     },
     {
-      "child_msg" : ["Noticias Locales","Noticias Nacionales","Noticias Mundial de Qatar","Finalizar chat"],
+      "child_msg" : ["Noticias de Criptomonedas","Noticias Científicas","Noticias Mundial de Qatar","Finalizar chat"],
       "children" : [
         {
-          "message" : "getNewsCM()",
+          "message" : "getNewsBC()",
           "type" : "function"
         },
         {
-          "message" : "getNewsHN()",
+          "message" : "getNewsSC()",
           "type" : "function"
         },
         {
@@ -36,7 +32,21 @@
       ]
     },
     {
-      "message" : "You're amazing and everything you do will make a positive effect on the world"
+      "child_msg" : ["El Clima en Comayagua hoy","El Clima en Comayagua mañana","El Clima en Comayagua esta semana","Finalizar chat"],
+      "children" : [
+        {
+          "message" : "getWeatherTd()",
+          "type" : "function"
+        },
+        {
+          "message" : "getWeatherTm()",
+          "type" : "function"
+        },
+        {
+          "message" : "getWeatherNW()",
+          "type" : "function"
+        }
+      ]
     }
   ]
 }
